@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pendaftaran;
+use Illuminate\Support\Facades\DB;
 
 class PendaftaranController extends Controller
 {
-    public function index(){
-        $pendaftarans = Pendaftaran::latest()->get();
-        return view('pendaftaran.status', compact('pendaftarans'));
+    public function show($nim){
+        $pendaftaran = Pendaftaran::where('nim', $nim)->firstOrFail()->get();
+        return view('pendaftaran.status', compact('pendaftaran'));
     }
 
     public function create(){
@@ -45,5 +46,16 @@ class PendaftaranController extends Controller
                     'error' => 'Some problem occurred, please try again'
                 ]);
         }
+    }
+
+    public function index(){
+        $nim='205150200111064';
+        $pendaftaran = Pendaftaran::latest()->where('nim', '=', $nim)->get();
+        return view('pendaftaran.status', compact('pendaftaran'));
+    }
+
+    public function destroy($id){
+        DB::skripsi_app('pendaftarans')->delete();
+        return view('pendaftaran');
     }
 }
