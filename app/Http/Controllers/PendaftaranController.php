@@ -19,7 +19,7 @@ class PendaftaranController extends Controller
     public function store(Request $request)
     {
 
-        $post = Pendaftaran::create([
+        $pendaftaran = Pendaftaran::create([
             'nama' => $request->nama,
             'nim' => $request->nim,
             'prodi' => $request->prodi,
@@ -32,11 +32,11 @@ class PendaftaranController extends Controller
             'terverifikasi' => false,
         ]);
 
-        if ($post) {
+        if ($pendaftaran) {
             return redirect()
                 ->route('pendaftaran.index')
                 ->with([
-                    'success' => 'New post has been created successfully'
+                    'success' => 'New pendaftaran has been created successfully'
                 ]);
         } else {
             return redirect()

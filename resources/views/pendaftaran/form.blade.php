@@ -22,6 +22,7 @@
         <div class="mb-3">
             <label class="form-label" for="pembimbing1">Pembimbing 1</label>
             <select class="form-control border border-primary" id="pembimbing1" name="pembimbing1">
+                <option value="">--- Silahkan Pilih Pembimbing 1 ---</option>
                 <option value="Ade Usada, M. Kom">Ade Usada, M. Kom</option>
                 <option value="Daliono Hardiansyah, M. Kom">Daliono Hardiansyah, M. Kom</option>
                 <option value="Drs. Lidya Kusmawati">Drs. Lidya Kusmawati</option>
@@ -32,6 +33,7 @@
         <div class="mb-3">
             <label class="form-label" for="pembimbing2">Pembimbing 2</label>
             <select class="form-control border border-primary" id="pembimbing2" name="pembimbing2">
+                <option value="">--- Silahkan Pilih Pembimbing 2 ---</option>
                 <option value="Ade Usada, M. Kom">Ade Usada, M. Kom</option>
                 <option value="Daliono Hardiansyah, M. Kom">Daliono Hardiansyah, M. Kom</option>
                 <option value="Drs. Lidya Kusmawati">Drs. Lidya Kusmawati</option>
@@ -41,11 +43,11 @@
         </div>
         <div class="mb-3">
             <label class="form-label" for="masaPelaksanaan">Masa Pelaksanaan</label>
-            <input class="form-control border border-primary" type="text" name="masaPelaksanaan" id="masaPelaksanaan">
+            <input class="form-control border border-primary" type="text" name="masaPelaksanaan" id="masaPelaksanaan" required>
         </div>
         <div class="mb-3">
             <label class="form-label" for="judul">Judul</label>
-            <input class="form-control border border-primary" type="text" name="judul" id="judul">
+            <input class="form-control border border-primary" type="text" name="judul" id="judul" required>
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Daftar</button>
